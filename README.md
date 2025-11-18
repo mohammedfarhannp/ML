@@ -68,5 +68,27 @@ Here are the names of the functions for loading datasets in different formats:
 3. **Excel**: `pd.read_excel()`
 4. **Parquet**: `pd.read_parquet()`
 
+## Preprocess Data (Clean up)
+### step 1 - Drop Duplicates
+```
+# Remove duplicate rows
+df.drop_duplicates(inplace=True)
+```
 
+### step 2 - Handle Missing Values
+#### Either Delete missing values
+```
+# Check for missing values
+print(df.isnull().sum())
+
+# Drop rows with missing values (if necessary)
+df.dropna(inplace=True)
+```
+
+#### Or fill missing values
+
+```
+# Alternatively, fill missing values (e.g., with the mean or median)
+df.fillna(df.mean(), inplace=True)  # for numerical columns
+```
 
