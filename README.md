@@ -14,6 +14,8 @@ Common Utilities
 ├── sklearn.metrics
 │   ├── accuracy_score
 │   ├── confusion_matrix
+|   ├── mean_squared_error
+|   ├── r2_score
 │   └── roc_auc_score
 |
 ├── numpy
@@ -130,4 +132,46 @@ from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(
     x, y, test_size=0.2, random_state=42
 )
+```
+
+# 3 - Model Training and Prediction
+## Use the model you imported instead of LinearRegression
+```
+from sklearn.linear_model import LinearRegression
+
+# Initialize the model
+model = LinearRegression()
+
+# Train the model on the training data
+model.fit(x_train, y_train)
+
+# Make predictions on the test set
+y_pred = model.predict(x_test)
+```
+
+# 4 - Evaluate Model
+## Classification Evaluation
+```
+from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score
+
+# Accuracy score
+print("Accuracy:", accuracy_score(y_test, y_pred))
+
+# Confusion matrix
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+# ROC AUC score (for binary classification)
+print("ROC AUC Score:", roc_auc_score(y_test, y_pred))
+```
+## Regression Evaluation
+```from sklearn.metrics import mean_squared_error, r2_score
+
+# Mean Squared Error (MSE)
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error:", mse)
+
+# R² score (coefficient of determination)
+r2 = r2_score(y_test, y_pred)
+print("R^2 Score:", r2)
 ```
