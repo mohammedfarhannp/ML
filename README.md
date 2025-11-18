@@ -41,5 +41,10 @@ Machine Learning Models
 ├── sklearn.cluster
 │   ├── KMeans
 │   ├── DBSCAN // Density Based Clustering
-│   └── AgglomerativeClustering // Heirarchical Clustering
+│   └── AgglomerativeClustering // Hierarchical Clustering
+│
+├── sklearn.neighbors
+│   ├── KNeighborsClassifier // K-Nearest Neighbors (Classification)
+│   └── KNeighborsRegressor  // K-Nearest Neighbors (Regression)
+
 ```
