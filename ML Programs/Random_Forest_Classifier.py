@@ -44,6 +44,25 @@ print("\n===== Evaluation =====")
 print("Accuracy :", accuracy_score(y_test, Y_Pred))
 print("\nClassification Report:\n", classification_report(y_test, Y_Pred))
 
+# New Data Prediction
+
+# Take a template row (copy structure of all features)
+template = x.iloc[0:1].copy()
+
+# Now modify only the fields you want to change
+template.iloc[0, list(template.columns).index('mean radius')] = 14.5
+template.iloc[0, list(template.columns).index('mean texture')] = 20.1
+template.iloc[0, list(template.columns).index('mean perimeter')] = 95.3
+template.iloc[0, list(template.columns).index('mean area')] = 650.0
+template.iloc[0, list(template.columns).index('mean smoothness')] = 0.09
+
+# Predict
+prediction = Model.predict(template)
+prediction_prob = Model.predict_proba(template)
+
+print("New Data Prediction\nPredicted Class  :", prediction[0])
+print("Prediction Prob. :", prediction_prob)
+
 # Confusion Matrix
 cm = confusion_matrix(y_test, Y_Pred)
 
