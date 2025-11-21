@@ -48,3 +48,31 @@ plt.xlabel("Actual Gold Prices")
 plt.ylabel("Predicted Gold Prices")
 plt.title("Actual vs Predicted Gold Price")
 plt.show()
+
+# New Data
+new_data = pd.DataFrame([{
+    "Date": pd.to_datetime("2025-01-15").toordinal(),
+    "Price 2 Days Prior": 2100,
+    "Price 1 Day Prior": 2120,
+    "Price Today": 2110,
+    "Price Change Tomorrow": 5,
+    "Price Change Ten": 12,
+    "Std Dev 10": 15.4,
+    "Twenty Moving Average": 2080,
+    "Fifty Day Moving Average": 2055,
+    "200 Day Moving Average": 1990,
+    "Monthly Inflation Rate": 3.2,
+    "EFFR Rate": 5.3,
+    "Volume ": 150000,
+    "Treasury Par Yield Month": 4.1,
+    "Treasury Par Yield Two Year": 4.7,
+    "Treasury Par Yield Curve Rates (10 Yr)": 4.3,
+    "DXY": 103.2,
+    "SP Open": 4700,
+    "VIX": 15.2,
+    "Crude": 78.5
+}])
+
+pred = Model.predict(new_data)[0]
+print("\nNew Data\nPredicted Price Tomorrow:", pred)
+
