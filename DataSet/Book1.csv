@@ -1,0 +1,15 @@
+ID,Age,Gender,Blood Pressure,Cholesterol Level,Exercise Habits,Smoking,Family Heart Disease,Diabetes,BMI
+1,56,Male,153,155,High,Yes,Yes,No,24.99159109
+2,69,Female,146,286,High,No,Yes,Yes,25.22179852
+3,46,Male,126,216,Low,No,No,No,29.85544714
+4,32,Female,122,293,High,Yes,Yes,No,24.13047688
+5,60,Male,166,242,Low,Yes,Yes,Yes,20.48628889
+6,25,Male,152,257,Low,Yes,No,No,28.14468146
+7,78,Female,121,175,High,Yes,Yes,Yes,18.04233189
+8,38,Female,161,187,Low,Yes,Yes,Yes,34.73668257
+9,56,Female,135,291,Low,No,Yes,Yes,34.49311222
+10,75,Male,144,252,Low,Yes,Yes,No,30.1421494
+11,36,Female,179,191,High,No,Yes,No,34.44761788
+12,40,Female,134,296,High,No,Yes,Yes,31.73962171
+13,28,Female,143,215,High,Yes,No,Yes,33.34401688
+14,28,Female,134,191,High,Yes,No,No,19.42242835
