@@ -16,7 +16,7 @@ Common Utilities
 │   ├── confusion_matrix
 |   ├── mean_squared_error
 |   ├── r2_score
-│   └── roc_auc_score
+│   └── classification_report
 |
 ├── numpy
 ├── pandas 
